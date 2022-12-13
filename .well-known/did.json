@@ -1,0 +1,48 @@
+{
+  "id": "did:web:nordicgamelab.org",
+  "@context": [
+    "https://www.w3.org/ns/did/v1",
+    {
+      "@base": "did:web:nordicgamelab.org"
+    }
+  ],
+  "service": [
+    {
+      "id": "#linkeddomains",
+      "type": "LinkedDomains",
+      "serviceEndpoint": {
+        "origins": [
+          "https://nordicgamelab.org/"
+        ]
+      }
+    },
+    {
+      "id": "#hub",
+      "type": "IdentityHub",
+      "serviceEndpoint": {
+        "instances": [
+          "https://hub.did.msidentity.com/v1.0/74291f4c-d02b-4a47-b84f-2420e48534ea"
+        ]
+      }
+    }
+  ],
+  "verificationMethod": [
+    {
+      "id": "#b2ba3e6459e944d2b09cf1b59b433a6bvcSigningKey-78ddc",
+      "controller": "did:web:nordicgamelab.org",
+      "type": "EcdsaSecp256k1VerificationKey2019",
+      "publicKeyJwk": {
+        "crv": "secp256k1",
+        "kty": "EC",
+        "x": "_DxjdVprNOa4ZA0aPEcGfjH1mwskcxvr8ujNZ3ltdYU",
+        "y": "QynD_ldFvB6hDhoskkuPPamBlxaTXnVUjhYbVhtyW-A"
+      }
+    }
+  ],
+  "authentication": [
+    "#b2ba3e6459e944d2b09cf1b59b433a6bvcSigningKey-78ddc"
+  ],
+  "assertionMethod": [
+    "#b2ba3e6459e944d2b09cf1b59b433a6bvcSigningKey-78ddc"
+  ]
+}
