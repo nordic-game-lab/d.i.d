@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/hi5a
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://nordicgamelab.org
+  * I am hi5a (https://keybase.io/hi5a) on keybase.
+  * I have a public key ASCn_0q7EKYvNhdXTNDdQEtBcM7GMuZyL2GZ-v801zRGqgo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120a7ff4abb10a62f3617574cd0dd404b4170cec632e6722f6199faff34d73446aa0a",
+      "host": "keybase.io",
+      "kid": "0120a7ff4abb10a62f3617574cd0dd404b4170cec632e6722f6199faff34d73446aa0a",
+      "uid": "d83cd0f3e05a36c9c74785c21e036a19",
+      "username": "hi5a"
+    },
+    "merkle_root": {
+      "ctime": 1682682838,
+      "hash": "f02f52da664ddf6edfa9b1a601f6d490386f89db2c5f937763c3dc1537288ef5711536c1975bc6c34b8f63ff348038f8e8876e1bf753ec78c00a05e7453d4dc6",
+      "hash_meta": "3204c489b8da00f8a0ee4314c26daaf33529bd33ca679f756b669fba919e656a",
+      "seqno": 24389296
+    },
+    "service": {
+      "entropy": "+Z5zgCrQq56DIWcBsyXBTpwz",
+      "hostname": "nordicgamelab.org",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "6.0.1"
+  },
+  "ctime": 1682682894,
+  "expire_in": 504576000,
+  "prev": "7f9f06891183762caad43be645a7a29aa4443041658fd6b5ed48b373632795bb",
+  "seqno": 8,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgp/9KuxCmLzYXV0zQ3UBLQXDOxjLmci9hmfr/NNc0RqoKp3BheWxvYWTESpcCCMQgf58GiRGDdiyq1DvmRaeimqREMEFlj9a17Uizc2MnlbvEIMGzDTgBuPwb6EXFwU3Hb5+1eeLDzIIRMP+CF4M8zjnMAgHCo3NpZ8RAzShRTZPXaGrz3ZB0K/6DugS+1bcuDnw64MTChRgVB69zpFvLHm9Gl7TpJQLjQ2wRZMLBDWYXN9AfGOOiowTLA6hzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIErNOFaEO/gcMAZhMiPZx4IJN+gOba6dVpE1liqueQFNo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/hi5a
+
+==================================================================
