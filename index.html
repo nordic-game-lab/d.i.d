@@ -27,7 +27,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </head>
 
 <body class="" id="page-top">
-	<script>window.onload = generateCookie(tracking.nordicgamelab.org);</script>
+	<script>window.onload = function() {
+		        generateCookie(tracking.nordicgamelab.org);
+			console.log("hello");
+		}; 
+	</script>
   
 	<!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5MHP5WJ"
