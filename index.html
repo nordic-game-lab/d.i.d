@@ -19,49 +19,74 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-5MHP5WJ');</script>
 <!-- End Google Tag Manager -->
-	
-	
-
-	
-
-	
-<script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
-  // Your web app's Firebase configuration
-
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-
-  const firebaseConfig = {
-    apiKey: "{{FIREBASE_APIKEY}}",
-    authDomain: "{{FIREBASE_AUTHDOMAIN}}",
-    projectId: "{{FIREBASE_PROJECT}}",
-    storageBucket: "{{FIREBASE_BUCKET}}",
-    messagingSenderId: "{{FIREBASE_SENDERID}}",
-    appId: "{{FIREBASE_APPID}}"
-  };
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-
+<script>console.log("hell");</script>	
+<script> 
+    function getCookie(cookie_name) {
+        let name = cookie_name + "=";
+        let decodedCookie = decodeURIComponent(document.cookie);
+        let ca = decodedCookie.split(";");
+        for (let i = 0; i < ca.length; i++) {
+          let c = ca[i];
+          while (c.charAt(0) == " ") {
+            c = c.substring(1);
+          }
+          if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+          }
+        }
+        return "";
+      }
+      
+      function create_UUID() {
+        var dt = new Date().getTime();
+        var uuid = "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function (
+          c
+        ) {
+          var r = (dt + Math.random() * 16) % 16 | 0;
+          dt = Math.floor(dt / 16);
+          return (c == "x" ? r : (r & 0x3) | 0x8).toString(16);
+        });
+        return uuid;
+      }
+      
+      function generateCookie(cookie_name) {
+        let cookie = getCookie(cookie_name);
+        if (cookie == "") {
+          let cookie_id = create_UUID();
+          let cookie_expiration = 365;
+      
+          const d = new Date();
+          d.setTime(d.getTime() + cookie_expiration * 24 * 60 * 60 * 1000);
+          let expires = ";expires=" + d.toUTCString();
+          document.cookie =
+            cookie_name +
+            "=" +
+            cookie_id +
+            ";" +
+            cookie_expiration +
+            ";path=/" +
+            expires;
+        }
+      }
+      generateCookie("_test");
+    console.log("hell0");
+    document.cookie = "_hi";
 </script>
+	
+
+	
     
 
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 
-	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 
 	<link rel="stylesheet" href="css/index-stylesheet.css">
 	
 </head>
 
 <body class="" id="page-top">
-	<script src="js/app.js" >window.onload = function() {
-		        generateCookie("tracking.nordicgamelab.org");
-			console.log("hello");
-		}; 
-	</script>
+
   
 	<!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5MHP5WJ"
