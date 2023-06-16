@@ -136,6 +136,19 @@
     </section>
     <!-- /Section: heading -->
 
+    <script>
+      function order_id() {
+        var dt = new Date().getTime();
+        var id = "yxxx-xxxxxx".replace(/[xy]/g, function (
+          c
+        ) {
+          var r = (dt + Math.random() * 16) % 16 | 0;
+          dt = Math.floor(dt / 16);
+          return (c == "x" ? r : (r & 0x3) | 0x8).toString(16);
+        });
+        return id;
+      }
+    </script>
 
     <!-- Section: store -->
     <section id="store" class="home-section text-center bg-gray">
@@ -146,7 +159,7 @@
           <div class="items">
             <div class="img img1"><img src="https://images.pexels.com/photos/1464625/pexels-photo-1464625.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt=""></div>
             <div class="name">SHOES</div>
-            <div class="price">$5</div>
+            <div class="price">$50</div>
             <div class="info">Lorem ipsum dolor sit amet consectetur.</div>
             <button onclick="openModal('modal-1')">View</button>
             </div>
@@ -170,8 +183,26 @@
 
     <div id="modal-1" class="jw-modal">
       <div class="jw-modal-body">
-          <h1>A custom modal popup</h1>
-          <p style="padding-bottom: 450px;">good</p>
+          <h1>Shoes</h1>
+          <div id="model_mainContent">
+          <div class="img img1">
+            <img src="https://images.pexels.com/photos/1464625/pexels-photo-1464625.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+          </div>
+          <p>some good shoes</p>
+          <button onclick="checkout()" id="checkoutbtn">Checkout</button>
+          </div>
+          <div>
+            <h2>Checkout Form</h2>
+            <form id="checkoutForm" method="POST" data-netlify="true" 
+                onsubmit="let order = order_id();
+                window.alert('Order ID: ' + order + '\n' + 'cost: 50' + '\n' + 'Thank you for you purchase.');">
+              <label for="name">Name:</label>
+              <input type="text" id="name" required>
+              <label for="email">Email:</label>
+              <input type="email" id="email" required>
+              <input type="submit" value="Submit">
+            </form>
+          </div>
           <button onclick="closeModal()">Close</button>
       </div>
   </div>
