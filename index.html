@@ -138,6 +138,7 @@
           }
         });
         </script>
+	
 	<script src="https://cmp.osano.com/16CPOfTh62uvh2bX/85e4fb9d-9ffa-4140-ae9a-6c9cba9ce060/osano.js"></script>
     	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -147,57 +148,7 @@
     	<meta charset="utf-8">
     	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     	<meta name="viewport" content="width=device-width, initial-scale=1">
-<script>	
-    function getCookie(cookie_name) {
-        let name = cookie_name + "=";
-        let decodedCookie = decodeURIComponent(document.cookie);
-        let ca = decodedCookie.split(";");
-        for (let i = 0; i < ca.length; i++) {
-          let c = ca[i];
-          while (c.charAt(0) == " ") {
-            c = c.substring(1);
-          }
-          if (c.indexOf(name) == 0) {
-            return c.substring(name.length, c.length);
-          }
-        }
-        return "";
-      }
-      
-      function create_UUID() {
-        var dt = new Date().getTime();
-        var uuid = "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function (
-          c
-        ) {
-          var r = (dt + Math.random() * 16) % 16 | 0;
-          dt = Math.floor(dt / 16);
-          return (c == "x" ? r : (r & 0x3) | 0x8).toString(16);
-        });
-        return uuid;
-      }
-      
-      function generateCookie(cookie_name) {
-        let cookie = getCookie(cookie_name);
-        if (cookie == "") {
-          let cookie_id = create_UUID();
-          let cookie_expiration = 365;
-      
-          const d = new Date();
-          d.setTime(d.getTime() + cookie_expiration * 24 * 60 * 60 * 1000);
-          let expires = ";expires=" + d.toUTCString();
-          document.cookie =
-            cookie_name +
-            "=" +
-            cookie_id +
-            ";" +
-            cookie_expiration +
-            ";path=/" +
-            expires;
-        }
-      }
-      generateCookie("_ngl-dev");
-    document.cookie = "_hi";
-</script>
+
 	
 
 	
@@ -212,15 +163,6 @@
 </head>
 
 <body id="page-top">
-	
-    <!-- Frill Widget (https://frill.co) -->
-    <script>
-        window.Frill_Config = window.Frill_Config || [];
-          window.Frill_Config.push({ key: '5ea31bbd-26e0-4f0f-b479-d7fcda88da4d' });
-    </script>
-    <script async="" src="https://widget.frill.co/v2/widget.js"></script>
-    <!-- End Frill Widget -->
-
 
 
 	
