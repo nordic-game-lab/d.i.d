@@ -1,483 +1,490 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <script src="js/cookieconsent.js"></script>
-    <script>
-        window.CookieConsent.init({
-          // More link URL on bar.
-          modalMainTextMoreLink: "//privacy.nordicgamelab.org",
-          // How long to wait until bar comes up.
-          barTimeout: 1000,
-          // Look and feel.
-          theme: {
-            barColor: '#2C7CBF',
-            barTextColor: '#FFF',
-            barMainButtonColor: '#FFF',
-            barMainButtonTextColor: '#2C7CBF',
-            modalMainButtonColor: '#4285F4',
-            modalMainButtonTextColor: '#FFF',
-          },
-          language: {
-            // Current language.
-            current: 'en',
-            locale: {
-              en: {
-                barMainText: 'This website uses cookies to ensure you get the best experience on our website.',
-                closeAriaLabel: 'close',
-                barLinkSetting: 'Cookie Settings',
-                barBtnAcceptAll: 'Accept all cookies',
-                modalMainTitle: 'Cookie settings',
-                modalMainText: 'Cookies are small pieces of data sent from a website and stored on the user\'s computer by the user\'s web browser while the user is browsing. Your browser stores each message in a small file, called cookie. When you request another page from the server, your browser sends the cookie back to the server. Cookies were designed to be a reliable mechanism for websites to remember information or to record the user\'s browsing activity.',
-                modalBtnSave: 'Save current settings',
-                modalBtnAcceptAll: 'Accept all cookies and close',
-                modalAffectedSolutions: 'Affected solutions:',
-                learnMore: 'Learn More',
-                on: 'On',
-                off: 'Off',
-                enabled: 'is enabled.',
-                disabled: 'is disabled.',
-                checked: 'checked',
-                unchecked: 'unchecked',
-              }
-            }
-          },
-          // List all the categories you want to display.
-          categories: {
-            // Unique name.
-            // This probably will be the default category.
-            necessary: {
-              // The cookies here are necessary and category can't be turned off.
-              // Wanted config value will be ignored.
-              needed: true,
-              // The cookies in this category will be let trough.
-              // This probably should be false if category not necessary.
-              wanted: true,
-              // If checkbox is on or off at first run.
-              checked: true,
-              // Language settings for categories.
-              language: {
-                locale: {
-                  en: {
-                    name: 'Strictly Necessary Cookies',
-                    description: 'These items are required to enable basic website functionality.',
-                  }
-                }
-              }
-            },
-            analytics: {
-                needed: false,
-                wanted: false,
-                checked: true,
-                language: {
-                    locale: {
-                        en: {
-                            name: 'Analytics',
-                            description: 'These items help the website operator understand how its website performs, how visitors interact with the site, and whether there may be technical issues. This storage type usually does not collect information that identifies a visitor.'
-                        }
-                    }
-                }
-            },
-            ab_testing: {
-                needed: true,
-                wanted: true,
-                checked: true,
-                language: {
-                    locale: {
-                        en: {
-                            name: 'A B testing',
-                            description: 'A/B testing (also known as split testing or bucket testing) is a methodology for comparing two versions of a webpage or app against each other to determine which one performs better.'
-                        }
-                    }
-                }
-            },
-        },
-            // List actual services here.
-          services: {
-            // Unique name.
-            analytics: {
-              category: 'analytics',
-              type: 'dynamic-script',
-              search: 'analytics',
-              cookies: [
-                {
-                  name: '_gid',
-                  domain: `.${window.location.hostname}`
-                },
-                {
-                  name: /^_ga/,
-                  domain: `.${window.location.hostname}`
-                }
-              ],
-              language: {
-                locale: {
-                  en: {
-                    name: 'Google Analytics'
-                  }
-                }
-              }
-            },
-            ab_testing: {
-                category: 'ab_testing',
-                type: 'dynamic-script',
-                search: 'nf_ab',
-                cookies: [
-                  {
-                    name: 'nf_ab',
-                    domain: `.${window.location.hostname}`
-                  }
-                ],
-                language: {
-                  locale: {
-                    en: {
-                      name: 'Netlify split testing'
-                    }
-                  }
-                }
-              }
-          }
-        });
-        </script>
-	
-	<script src="https://cmp.osano.com/16CPOfTh62uvh2bX/85e4fb9d-9ffa-4140-ae9a-6c9cba9ce060/osano.js"></script>
-    	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    	<link rel="manifest" href="/site.webmanifest">
-	<title>Nordic Game Lab LLC</title>
-    	<meta charset="utf-8">
-    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	
-
-	
-    
-
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-
-	<link rel="stylesheet" href="css/index-stylesheet.css">
-	
-</head>
-
-<body id="page-top">
-
-
-	
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand" href="https://nordicgamelab.org?utm_source=main-website&utm_medium=logo&utm_campaign=logo-click&utm_id=logo-1">
-                    <h1>Nordic Game Lab<br></h1>
-                </a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#intro">Home</a>
-                    </li>
-                    <li><a href="#about">About</a>
-                    </li>
-                    <li><a href="#service">Service</a>
-                    </li>
-                    <li><a href="#contact">Contact</a>
-                    </li>
-                    <li><a href="store">Store</a>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Account <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Login</a>
-                            </li>
-                            <li><a href="#">Signout</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-
-    <!-- Section: intro -->
-    <section id="intro" class="intro">
-
-        <div class="slogan">
-            <h2>WELCOME TO <span class="text_color">nordic game lab&nbsp;</span> </h2>
-            <h4>WE ARE GROUP OF GENTLEMEN MAKING AWESOME WEB WITH BOOTSTRAP</h4>
-        </div>
-        <div class="page-scroll">
-            <a href="#service" class="btn btn-circle">
-                <i class="fa fa-angle-double-down animated"></i>
-            </a>
-        </div>
-    </section>
-    <!-- /Section: intro -->
-
-    <!-- Section: founder-->
-    <section id="leadership">
-        <div class="row">
-            <div class="column">
-              <div class="card">
-            
-                <div class="container">
-                  <h2>Andrew Ball</h2>
-                  <p class="title">CEO &amp; Founder</p>
-                  <p>I am a software developer and I did not like the prices of software so I started my own company to build cheaper software.</p>
-                  <p>andrew@nordicgamelab.org</p>
-                  <p><button class="button">Contact</button></p>
-                </div>
-              </div>
-            </div>
-    </section>
-    <!-- /Section: founder-->
-    
-    <!-- Section: about -->
-    <section id="about" class="home-section text-center">
-        <div class="heading-about">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="wow bounceInDown" data-wow-delay="0.4s">
-                            <div class="section-heading">
-                                <h2>About us</h2>
-                                <i class="fa fa-2x fa-angle-down"></i>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div id="" style="height: 191px; overflow: hidden;">
-                        <p>We are a small game development, software development, and IT services company.
-                            <br>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </section>
-    <!-- /Section: about -->
-
-
-    <!-- Section: services -->
-    <section id="service" class="home-section text-center bg-gray">
-
-        <div class="heading-about">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="wow bounceInDown" data-wow-delay="0.4s">
-                            <div class="section-heading">
-                                <h2>Our Services</h2>
-                                <i class="fa fa-2x fa-angle-down"></i>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-2 col-lg-offset-5">
-                    <hr class="marginbot-50">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-3 col-md-3">
-                    <div class="wow fadeInLeft" data-wow-delay="0.2s">
-                        <div class="service-box">
-                            <div class="service-icon">
-                                <img src="images/service-icon-1.png" alt="">
-                            </div>
-                            <div class="service-desc">
-                                <h5>Print</h5>
-                                <p>Vestibulum tincidunt enim in pharetra malesuada. Duis semper magna metus electram accommodare.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3 col-md-3">
-                    <div class="wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="service-box">
-                            <div class="service-icon">
-                                <img src="images/service-icon-2.png" alt="">
-                            </div>
-                            <div class="service-desc">
-                                <h5>Web Design</h5>
-                                <p>Vestibulum tincidunt enim in pharetra malesuada. Duis semper magna metus electram accommodare.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3 col-md-3">
-                    <div class="wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="service-box">
-                            <div class="service-icon">
-                                <img src="images/service-icon-3.png" alt="">
-                            </div>
-                            <div class="service-desc">
-                                <h5>Photography</h5>
-                                <p>Vestibulum tincidunt enim in pharetra malesuada. Duis semper magna metus electram accommodare.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3 col-md-3">
-                    <div class="wow fadeInRight" data-wow-delay="0.2s">
-                        <div class="service-box">
-                            <div class="service-icon">
-                                <img src="images/service-icon-4.png" alt="">
-                            </div>
-                            <div class="service-desc">
-                                <h5>Cloud System</h5>
-                                <p>Vestibulum tincidunt enim in pharetra malesuada. Duis semper magna metus electram accommodare.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- /Section: services -->
-
-
-
-
-    <!-- Section: contact -->
-    <section id="contact" class="home-section text-center">
-        <div class="heading-contact">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="wow bounceInDown" data-wow-delay="0.4s">
-                            <div class="section-heading">
-                                <h2>Get in touch</h2>
-                                <i class="fa fa-2x fa-angle-down"></i>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-
-            <div class="row">
-                <div class="col-lg-2 col-lg-offset-5">
-                    <hr class="marginbot-50">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-8">
-                    <div class="boxed-grey">
-                        <form id="contact-form" method="POST" data-netlify="true">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="name">
-                                            Name</label>
-                                        <input type="text" class="form-control" id="name" placeholder="Enter name" required="required">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="email">
-                                            Email Address</label>
-                                        <div class="input-group">
-                                            <span class="input-group-addon"><span class="fa fa-envelope"></span>
-                                            </span>
-                                            <input type="email" class="form-control" id="email" placeholder="Enter email" required="required">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="subject">
-                                            Subject</label>
-                                        <select id="subject" name="subject" class="form-control" required="required">
-                                            <option value="na" selected="">Choose One:</option>
-                                            <option value="service">General Customer Service</option>
-                                            <option value="suggestions">Suggestions</option>
-                                            <option value="product">Product Support</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="name">
-                                            Message</label>
-                                        <textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required" placeholder="Message"></textarea>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <button type="submit" class="btn btn-skin pull-right" id="btnContactUs">
-                                        Send Message</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="widget-contact">
-                        <h5>Main Office</h5>
-
-
-
-                        <address><address>
-				  <strong>Nordic Game Lab LLC.</strong><br>
-				  <abbr title="Phone">P:</abbr> (123) 456-7890
-				</address>
-                        <strong>Email</strong>
-                        <br>
-
-                        </address><a href="mailto:hello@nordicgamelab.org" id="">email.hello@nordicgamelab.org</a>	
-                        <address>
-				  <strong>We're on social networks</strong><br>
-                       	<ul class="company-social">
-                            <li class="social-facebook"><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                            <li class="social-twitter"><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                        </ul>	
-				</address>	
-
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-    <!-- /Section: contact -->
-
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 col-lg-12">
-                    <div class="wow shake" data-wow-delay="0.4s">
-                        <div class="page-scroll marginbot-30">
-                            <a href="#intro" id="totop" class="btn btn-circle">
-                                <i class="fa fa-angle-double-up animated"></i>
-                            </a>
-                        </div>
-			    <a target="_blank" href="https://betteruptime.com/"><img style="width: 130px; height: 52px;" alt="Better Uptime Website Monitoring" src="https://betteruptime.com/assets/static_assets/badges/dark.png" /></a>
-			    <a id="privacy" class="footer_links" herf="https://policies.nordicgamelab.org/privacy"> Privacy policy</a>
-			    <a id="sitemap" class="footer_links" herf="/sitemap.xml"> Sitemap </a>
-                    </div>
-                    <p>©Copyright 2023 - Nordic Game Lab. All rights reserved.</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-<script src="js/jquery.js"></script>
-<script src="js/bootstrap.js"></script>
-<script src="js/jquery-easing.js"></script>
-<script src="js/wow.js"></script>
-<script src="js/scroll-to.js"></script>
-<script id="main-script" src="js/index-scripts.js"></script>
-</body>
-
-</html>
+<!-- DOCTYPE html --> 
+ <html> 
+  
+ <head> 
+     <script src="//static.nordicgamelab.org/cookieconsent.min.js"></script> 
+     <script type="text/javascript"> 
+         window.CookieConsent.init({ 
+           // More link URL on bar. 
+           modalMainTextMoreLink: "//policies.nordicgamelab.org/privacy", 
+           // How long to wait until bar comes up. 
+           barTimeout: 1000, 
+           // Look and feel. 
+           theme: { 
+             barColor: '#2C7CBF', 
+             barTextColor: '#FFF', 
+             barMainButtonColor: '#FFF', 
+             barMainButtonTextColor: '#2C7CBF', 
+             modalMainButtonColor: '#4285F4', 
+             modalMainButtonTextColor: '#FFF', 
+           }, 
+           language: { 
+             // Current language. 
+             current: 'en', 
+             locale: { 
+               en: { 
+                 barMainText: 'This website uses cookies to ensure you get the best experience on our website.', 
+                 closeAriaLabel: 'close', 
+                 barLinkSetting: 'Cookie Settings', 
+                 barBtnAcceptAll: 'Accept all cookies', 
+                 modalMainTitle: 'Cookie settings', 
+                 modalMainText: 'Cookies are small pieces of data sent from a website and stored on the user\'s computer by the user\'s web browser while the user is browsing. Your browser stores each message in a small file, called cookie. When you request another page from the server, your browser sends the cookie back to the server. Cookies were designed to be a reliable mechanism for websites to remember information or to record the user\'s browsing activity.', 
+                 modalBtnSave: 'Save current settings', 
+                 modalBtnAcceptAll: 'Accept all cookies and close', 
+                 modalAffectedSolutions: 'Affected solutions:', 
+                 learnMore: 'Learn More', 
+                 on: 'On', 
+                 off: 'Off', 
+                 enabled: 'is enabled.', 
+                 disabled: 'is disabled.', 
+                 checked: 'checked', 
+                 unchecked: 'unchecked', 
+               } 
+             } 
+           }, 
+           // List all the categories you want to display. 
+           categories: { 
+             // Unique name. 
+             // This probably will be the default category. 
+             necessary: { 
+               // The cookies here are necessary and category can't be turned off. 
+               // Wanted config value will be ignored. 
+               needed: true, 
+               // The cookies in this category will be let trough. 
+               // This probably should be false if category not necessary. 
+               wanted: true, 
+               // If checkbox is on or off at first run. 
+               checked: true, 
+               // Language settings for categories. 
+               language: { 
+                 locale: { 
+                   en: { 
+                     name: 'Strictly Necessary Cookies', 
+                     description: 'These items are required to enable basic website functionality.', 
+                   } 
+                 } 
+               } 
+             }, 
+             analytics: { 
+                 needed: false, 
+                 wanted: false, 
+                 checked: true, 
+                 language: { 
+                     locale: { 
+                         en: { 
+                             name: 'Analytics', 
+                             description: 'These items help the website operator understand how its website performs, how visitors interact with the site, and whether there may be technical issues. This storage type usually does not collect information that identifies a visitor.' 
+                         } 
+                     } 
+                 } 
+             }, 
+             ab_testing: { 
+                 needed: true, 
+                 wanted: true, 
+                 checked: true, 
+                 language: { 
+                     locale: { 
+                         en: { 
+                             name: 'A B testing', 
+                             description: 'A/B testing (also known as split testing or bucket testing) is a methodology for comparing two versions of a webpage or app against each other to determine which one performs better.' 
+                         } 
+                     } 
+                 } 
+             }, 
+         }, 
+             // List actual services here. 
+           services: { 
+             // Unique name. 
+             analytics: { 
+               category: 'analytics', 
+               type: 'dynamic-script', 
+               search: 'analytics', 
+               cookies: [ 
+                 { 
+                   name: '_gid', 
+                   domain: `.${window.location.hostname}` 
+                 }, 
+                 { 
+                   name: /^_ga/, 
+                   domain: `.${window.location.hostname}` 
+                 } 
+               ], 
+               language: { 
+                 locale: { 
+                   en: { 
+                     name: 'Google Analytics' 
+                   } 
+                 } 
+               } 
+             }, 
+             ab_testing: { 
+                 category: 'ab_testing', 
+                 type: 'dynamic-script', 
+                 search: 'nf_ab', 
+                 cookies: [ 
+                   { 
+                     name: 'nf_ab', 
+                     domain: `.${window.location.hostname}` 
+                   } 
+                 ], 
+                 language: { 
+                   locale: { 
+                     en: { 
+                       name: 'Netlify split testing' 
+                     } 
+                   } 
+                 } 
+               } 
+           } 
+         }); 
+         </script> 
+  
+  
+             <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png"> 
+               <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png"> 
+                <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png"> 
+             <link rel="manifest" href="/site.webmanifest"> 
+         <title>Nordic Game Lab LLC</title> 
+             <meta charset="utf-8"> 
+             <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+             <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  
+  
+ <script type="text/partytown"> 
+ (function(c,a){if(!a.__SV){var b=window;try{var d,m,j,k=b.location,f=k.hash;d=function(a,b){return(m=a.match(RegExp(b+"=([^&]*)")))?m[1]:null};f&&d(f,"fpState")&&(j=JSON.parse(decodeURIComponent(d(f,"fpState"))),"fpeditor"===j.action&&(b.sessionStorage.setItem("_fpcehash",f),history.replaceState(j.desiredHash||"",c.title,k.pathname+k.search)))}catch(n){}var l,h;window.freshpaint=a;a._i=[];a.init=function(b,d,g){function c(b,i){var a=i.split(".");2==a.length&&(b=b[a[0]],i=a[1]);b[i]=function(){b.push([i].concat(Array.prototype.slice.call(arguments, 
+ 0)))}}var e=a;"undefined"!==typeof g?e=a[g]=[]:g="freshpaint";e.people=e.people||[];e.toString=function(b){var a="freshpaint";"freshpaint"!==g&&(a+="."+g);b||(a+=" (stub)");return a};e.people.toString=function(){return e.toString(1)+".people (stub)"};l="disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove people group page alias ready addEventProperties addInitialEventProperties removeEventProperty addPageviewProperties".split(" "); 
+ for(h=0;h<l.length;h++)c(e,l[h]);var f="set set_once union unset remove delete".split(" ");e.get_group=function(){function a(c){b[c]=function(){call2_args=arguments;call2=[c].concat(Array.prototype.slice.call(call2_args,0));e.push([d,call2])}}for(var b={},d=["get_group"].concat(Array.prototype.slice.call(arguments,0)),c=0;c<f.length;c++)a(f[c]);return b};a._i.push([b,d,g])};a.__SV=1.4;b=c.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof FRESHPAINT_CUSTOM_LIB_URL? 
+ FRESHPAINT_CUSTOM_LIB_URL:"//perfalytics.com/static/js/freshpaint.js";(d=c.getElementsByTagName("script")[0])?d.parentNode.insertBefore(b,d):c.head.appendChild(b)}})(document,window.freshpaint||[]); 
+ freshpaint.init("7375855e-69dc-4c90-bdc2-f0f5455ed0c5"); 
+ freshpaint.page(); 
+ </script> 
+  
+  
+ <script src="https://www.google.com/recaptcha/api.js" async defer></script> 
+         <link rel="stylesheet" href="css/bootstrap.min.css"> 
+  
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"> 
+  
+         <link rel="stylesheet" href="css/index-stylesheet.css"> 
+     <link rel="stylesheet" href="css/index.css"> 
+  
+ </head> 
+  
+ <body id="page-top"> 
+  
+  
+  
+  
+     <nav class="navbar navbar-custom navbar-fixed-top" role="navigation"> 
+         <div class="container"> 
+             <div class="navbar-header page-scroll"> 
+                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse"> 
+                     <i class="fa fa-bars"></i> 
+                 </button> 
+                 <a class="navbar-brand" href="https://link.nordicgamelab.org/GrX"> 
+                     <h1>Nordic Game Lab<br></h1> 
+                 </a> 
+             </div> 
+  
+             <!-- Collect the nav links, forms, and other content for toggling --> 
+             <div class="collapse navbar-collapse navbar-right navbar-main-collapse"> 
+                 <ul class="nav navbar-nav"> 
+                     <li class="active"><a href="#intro">Home</a> 
+                     </li> 
+                     <li><a href="#about">About</a> 
+                     </li> 
+                     <li><a href="#service">Service</a> 
+                     </li> 
+                     <li><a href="#contact">Contact</a> 
+                     </li> 
+                     <li><a href="store">Store</a> 
+                     </li> 
+                     <li><a href="//roadmap.nordicgamelab.org">Roadmap</a> 
+                     </li> 
+                     <li class="dropdown"> 
+                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Account <b class="caret"></b></a> 
+                         <ul class="dropdown-menu"> 
+                             <li><a href="#">Login</a> 
+                             </li> 
+                             <li><a href="#">Signout</a> 
+                             </li> 
+                         </ul> 
+                     </li> 
+                 </ul> 
+             </div> 
+             <!-- /.navbar-collapse --> 
+         </div> 
+         <!-- /.container --> 
+     </nav> 
+  
+     <!-- Section: intro --> 
+     <section id="intro" class="intro"> 
+  
+         <div class="slogan"> 
+             <h2>WELCOME TO <span class="text_color">nordic game lab&nbsp;</span> </h2> 
+             <h4>WE ARE GROUP OF GENTLEMEN MAKING AWESOME WEB WITH BOOTSTRAP</h4> 
+         </div> 
+         <div class="page-scroll"> 
+             <a href="#service" class="btn btn-circle"> 
+                 <i class="fa fa-angle-double-down animated"></i> 
+             </a> 
+         </div> 
+     </section> 
+     <!-- /Section: intro --> 
+  
+     <!-- Section: founder--> 
+     <section id="leadership"> 
+         <div class="row"> 
+             <div class="column"> 
+               <div class="card"> 
+  
+                 <div class="container"> 
+                   <h2>Andrew Ball</h2> 
+                   <p class="title">CEO &amp; Founder</p> 
+                   <p>I am a software developer and I did not like the prices of software so I started my own company to build cheaper software.</p> 
+                   <p>andrew@nordicgamelab.org</p> 
+                   <p><button class="button">Contact</button></p> 
+                 </div> 
+               </div> 
+             </div> 
+     </section> 
+     <!-- /Section: founder--> 
+  
+     <!-- Section: about --> 
+     <section id="about" class="home-section text-center"> 
+         <div class="heading-about"> 
+             <div class="container"> 
+                 <div class="row"> 
+                     <div class="col-lg-8 col-lg-offset-2"> 
+                         <div class="wow bounceInDown" data-wow-delay="0.4s"> 
+                             <div class="section-heading"> 
+                                 <h2>About us</h2> 
+                                 <i class="fa fa-2x fa-angle-down"></i> 
+  
+                             </div> 
+                         </div> 
+                     </div> 
+                     <div id="" style="height: 191px; overflow: hidden;"> 
+                         <p>We are a small game development, software development, and IT services company. 
+                             <br> 
+                         </p> 
+                     </div> 
+                 </div> 
+             </div> 
+         </div> 
+  
+     </section> 
+     <!-- /Section: about --> 
+  
+  
+     <!-- Section: services --> 
+     <section id="service" class="home-section text-center bg-gray"> 
+  
+         <div class="heading-about"> 
+             <div class="container"> 
+                 <div class="row"> 
+                     <div class="col-lg-8 col-lg-offset-2"> 
+                         <div class="wow bounceInDown" data-wow-delay="0.4s"> 
+                             <div class="section-heading"> 
+                                 <h2>Our Services</h2> 
+                                 <i class="fa fa-2x fa-angle-down"></i> 
+  
+                             </div> 
+                         </div> 
+                     </div> 
+                 </div> 
+             </div> 
+         </div> 
+         <div class="container"> 
+             <div class="row"> 
+                 <div class="col-lg-2 col-lg-offset-5"> 
+                     <hr class="marginbot-50"> 
+                 </div> 
+             </div> 
+             <div class="row"> 
+                 <div class="col-sm-3 col-md-3"> 
+                     <div class="wow fadeInLeft" data-wow-delay="0.2s"> 
+                         <div class="service-box"> 
+                             <div class="service-icon"> 
+                                 <img src="images/service-icon-1.png" alt=""> 
+                             </div> 
+                             <div class="service-desc"> 
+                                 <h5>Print</h5> 
+                                 <p>Vestibulum tincidunt enim in pharetra malesuada. Duis semper magna metus electram accommodare.</p> 
+                             </div> 
+                         </div> 
+                     </div> 
+                 </div> 
+                 <div class="col-sm-3 col-md-3"> 
+                     <div class="wow fadeInUp" data-wow-delay="0.2s"> 
+                         <div class="service-box"> 
+                             <div class="service-icon"> 
+                                 <img src="images/service-icon-2.png" alt=""> 
+                             </div> 
+                             <div class="service-desc"> 
+                                 <h5>Web Design</h5> 
+                                 <p>Vestibulum tincidunt enim in pharetra malesuada. Duis semper magna metus electram accommodare.</p> 
+                             </div> 
+                         </div> 
+                     </div> 
+                 </div> 
+                 <div class="col-sm-3 col-md-3"> 
+                     <div class="wow fadeInUp" data-wow-delay="0.2s"> 
+                         <div class="service-box"> 
+                             <div class="service-icon"> 
+                                 <img src="images/service-icon-3.png" alt=""> 
+                             </div> 
+                             <div class="service-desc"> 
+                                 <h5>Photography</h5> 
+                                 <p>Vestibulum tincidunt enim in pharetra malesuada. Duis semper magna metus electram accommodare.</p> 
+                             </div> 
+                         </div> 
+                     </div> 
+                 </div> 
+                 <div class="col-sm-3 col-md-3"> 
+                     <div class="wow fadeInRight" data-wow-delay="0.2s"> 
+                         <div class="service-box"> 
+                             <div class="service-icon"> 
+                                 <img src="images/service-icon-4.png" alt=""> 
+                             </div> 
+                             <div class="service-desc"> 
+                                 <h5>Cloud System</h5> 
+                                 <p>Vestibulum tincidunt enim in pharetra malesuada. Duis semper magna metus electram accommodare.</p> 
+                             </div> 
+                         </div> 
+                     </div> 
+                 </div> 
+             </div> 
+         </div> 
+     </section> 
+     <!-- /Section: services --> 
+  
+  
+  
+  
+     <!-- Section: contact --> 
+     <section id="contact" class="home-section text-center"> 
+         <div class="heading-contact"> 
+             <div class="container"> 
+                 <div class="row"> 
+                     <div class="col-lg-8 col-lg-offset-2"> 
+                         <div class="wow bounceInDown" data-wow-delay="0.4s"> 
+                             <div class="section-heading"> 
+                                 <h2>Get in touch</h2> 
+                                 <i class="fa fa-2x fa-angle-down"></i> 
+  
+                             </div> 
+                         </div> 
+                     </div> 
+                 </div> 
+             </div> 
+         </div> 
+         <div class="container"> 
+  
+             <div class="row"> 
+                 <div class="col-lg-2 col-lg-offset-5"> 
+                     <hr class="marginbot-50"> 
+                 </div> 
+             </div> 
+             <div class="row"> 
+                 <div class="col-lg-8"> 
+                     <div class="boxed-grey"> 
+                         <form class="g-recaptcha" data-sitekey="6LcZYLMnAAAAAMGNxTxM3_boPVKGS6FGZ2hUSy_8" id="contact-form" method="POST" action="//api.nordicgamelab.org/api/submit-form"> 
+                             <div class="row"> 
+                                 <div class="col-md-6"> 
+                                     <div class="form-group"> 
+                                         <label for="name"> 
+                                             Name</label> 
+                                         <input type="text" class="form-control" id="name" placeholder="Enter name" required="required" name="name"> 
+                                     </div> 
+                                     <div class="form-group"> 
+                                         <label for="email"> 
+                                             Email Address</label> 
+                                         <div class="input-group"> 
+                                             <span class="input-group-addon"><span class="fa fa-envelope"></span> 
+                                             </span> 
+                                             <input type="email" class="form-control" id="email" placeholder="Enter email" required="required" name="email"> 
+                                         </div> 
+                                     </div> 
+                                 </div> 
+                                 <div class="col-md-6"> 
+                                     <div class="form-group"> 
+                                         <label for="name"> 
+                                             Message</label> 
+                                         <textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required" placeholder="Message" name="message"></textarea> 
+                                     </div> 
+                                 </div> 
+                                 <div class="col-md-12"> 
+                                     <button type="submit" class="btn btn-skin pull-right" id="btnContactUs"> 
+                                         Send Message</button> 
+                                 </div> 
+                             </div> 
+                         </form> 
+                     </div> 
+                 </div> 
+  
+                 <div class="col-lg-4"> 
+                     <div class="widget-contact"> 
+                         <h5>Main Office</h5> 
+  
+  
+  
+                         <address><address> 
+                                   <strong>Nordic Game Lab LLC.</strong><br> 
+                                   <abbr title="Phone">P:</abbr> (123) 456-7890 
+                                 </address> 
+                         <strong>Email</strong> 
+                         <br> 
+  
+                         </address><a href="mailto:hello@nordicgamelab.org" id="">email.hello@nordicgamelab.org</a>         
+                         <address> 
+                                   <strong>We're on social networks</strong><br> 
+                                <ul class="company-social"> 
+                             <li><a rel="me" href="https://mastodon.social/@hi5a"><img src="/images/mastodon-fill.png" width="40" height="40"></a></li> 
+                         </ul>         
+                                 </address>         
+  
+                     </div> 
+                 </div> 
+             </div> 
+  
+         </div> 
+     </section> 
+     <!-- /Section: contact --> 
+  
+     <footer> 
+         <div class="container"> 
+             <div class="row"> 
+                 <div class="col-md-12 col-lg-12"> 
+                     <div class="wow shake" data-wow-delay="0.4s"> 
+                         <div class="page-scroll marginbot-30"> 
+                             <a href="#intro" id="totop" class="btn btn-circle"> 
+                                 <i class="fa fa-angle-double-up animated"></i> 
+                             </a> 
+                         </div> 
+                                     <a target="_blank" href="https://betteruptime.com/"><img style="width: 130px; height: 52px;" alt="Better Uptime Website Monitoring" src="https://betteruptime.com/assets/static_assets/badges/dark.png" /></a> 
+                                     <a id="privacy" class="footer-links" href="https://policies.nordicgamelab.org/privacy"> Privacy policy</a> 
+                         <a id="sitemap" class="footer-links" href="/sitemap.xml"> Sitemap </a> 
+                     </div> 
+                     <p>©Copyright 2023 - Nordic Game Lab. All rights reserved.</p> 
+                 </div> 
+             </div> 
+         </div> 
+     </footer> 
+  
+ <script src="js/jquery.js"></script> 
+ <script src="js/bootstrap.js"></script> 
+ <script src="js/jquery-easing.js"></script> 
+ <script src="js/wow.js"></script> 
+ <script src="js/scroll-to.js"></script> 
+ <script id="main-script" src="js/index-scripts.js"></script> 
+ <script type="module"> 
+     import { partytownSnippet } from '@builder.io/partytown/integration'; 
+     const snippetText = partytownSnippet(); 
+     const el = document.createElement('script'); 
+     el.innerText = snippetText; 
+     document.body.appendChild(el); 
+ </script> 
+ </body> 
+  
+ </html>
