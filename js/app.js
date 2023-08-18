@@ -23,7 +23,7 @@ window.addEventListener('load', function() {
 
 function checkout() {
   modalMain.style.display = 'none';
-};
+}
 
 // Handle form submission
 const form = document.getElementById('checkoutForm');
