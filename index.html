@@ -387,7 +387,7 @@ freshpaint.page();
             <div class="row">
                 <div class="col-lg-8">
                     <div class="boxed-grey">
-                        <form class="g-recaptcha" data-sitekey="6LcZYLMnAAAAAMGNxTxM3_boPVKGS6FGZ2hUSy_8" id="contact-form" method="POST" action="//api.nordicgamelab.org/api/submit-form">
+                        <form id="contact-form" method="POST" action="//api.nordicgamelab.org/api/submit-form">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
@@ -482,6 +482,11 @@ freshpaint.page();
     const el = document.createElement('script');
     el.innerText = snippetText;
     document.body.appendChild(el);
+</script>
+<script>
+    function captchaSubmit(data) {
+        document.getElementById("contact-form").submit();
+    }
 </script>
 </body>
 
