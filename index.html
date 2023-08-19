@@ -387,7 +387,7 @@ freshpaint.page();
             <div class="row">
                 <div class="col-lg-8">
                     <div class="boxed-grey">
-                        <form id="contact-form" method="POST" action="//api.nordicgamelab.org/api/submit-form">
+                        <form id="contact-form" method="POST">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
@@ -477,7 +477,7 @@ freshpaint.page();
 <script src="js/scroll-to.js"></script>
 <script id="main-script" src="js/index-scripts.js"></script>
 <script type="module">
-    import { partytownSnippet } from '@builder.io/partytown/integration';
+    import { partytownSnippet } from '/node_modules/@builder.io/partytown/integration';
     const snippetText = partytownSnippet();
     const el = document.createElement('script');
     el.innerText = snippetText;
@@ -486,8 +486,7 @@ freshpaint.page();
 <script>
     async function captchaSubmit(data) {
         const form = document.getElementById("contact-form");
-        form.preventDefault();
-        const url = form.action;
+        const url = 'https://api.nordicgamelab.org/api/submit-form';
 
         try {
             const formData = new FormData(form);
@@ -514,7 +513,7 @@ freshpaint.page();
                 "Accept": "application/json"
             },
             
-            body: formDataJsonString,
+            body: formDataJsonString
         };
     
         const response = await fetch(url, fetchOptions);
