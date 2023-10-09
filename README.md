@@ -1,1 +1,0 @@
-[![CodeFactor](https://www.codefactor.io/repository/github/nordic-game-lab/d.i.d./badge)](https://www.codefactor.io/repository/github/nordic-game-lab/d.i.d.)
