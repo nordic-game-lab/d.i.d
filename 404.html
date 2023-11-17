@@ -1,20 +1,56 @@
 <!DOCTYPE html>
 <html>
-  <head>
-	  
+  <head>  
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
-     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
-    	  <link rel="manifest" href="/site.webmanifest">	
-          <meta charset="utf-8">
-          <meta http-equiv="X-UA-Compatible" content="IE=edge">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    	  <title> PAGE NOT FOUND </title>
-</head>
-	
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">	
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/404.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/index-stylesheet.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <title> PAGE NOT FOUND </title>
+  </head>
 
   <body>
-    <h1> 404 page not found </h1>
-    <a href="/">Home</a>
-   </body>
+    <section class="page_404">
+      <div class="container">
+        <div class="row">	
+          <div class="col-sm-12 ">
+            <div class="col-sm-10 col-sm-offset-1  text-center">
+              <div class="four_zero_four_bg">
+                <h1 class="text-center ">404</h1>
+              </div>
+              <div class="contant_box_404">
+                <h3 class="h2">Look like you're lost</h3>
+                <p>the page you are looking for not avaible!</p>
+                <a href="/" class="link_404">Go to Home</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-lg-12">
+            <div class="wow shake" data-wow-delay="0.4s">
+              <a target="_blank" href="https://betteruptime.com/"><img style="width: 130px; height: 52px;" alt="Better Uptime Website Monitoring" src="https://betteruptime.com/assets/static_assets/badges/dark.png" /></a>
+              <a id="privacy" class="footer-links" href="https://policies.nordicgamelab.org/privacy"> Privacy policy</a>
+              <a id="sitemap" class="footer-links" href="/sitemap.xml"> Sitemap </a>
+            </div>
+            <p id="copyright">© Nordic Game Lab. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      const copyrightContainer = document.getElementById('copyright');
+      copyrightContainer.textContent = `© ${new Date().getFullYear()} Nordic Game Lab LLC. All rights reserved.`
+    </script>
+  </body>
 </html>
