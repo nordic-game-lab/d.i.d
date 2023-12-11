@@ -307,6 +307,7 @@ freshpaint.page();
             <div class="row">
                 <div class="col-lg-8">
                     <div class="boxed-grey">
+                        <h1 style="display: none;" id="thankYouMessage">Thank You!</h1>
                         <form id="contact-form" method="POST">
                             <div class="row">
                                 <div class="col-md-6">
@@ -394,27 +395,25 @@ freshpaint.page();
 <script src="js/wow.js"></script>
 <script src="js/scroll-to.js"></script>
 <script id="main-script" src="js/index-scripts.js"></script>
-<script type="module">
-    import { partytownSnippet } from './node_modules/@builder.io/partytown/integration/index.mjs';
-    const snippetText = partytownSnippet();
-    const el = document.createElement('script');
-    el.innerText = snippetText;
-    document.body.appendChild(el);
-</script>
+<script type="module" src="js/partytowntojs.mjs"></script>
 <script>
     const copyrightContainer = document.getElementById('copyright');
-    copyrightContainer.textContent = `© ${new Date().getFullYear()} Nordic Game Lab LLC. All rights reserved.`
+    copyrightContainer.textContent = `© ${new Date().getFullYear()} Nordic Game Lab, LLC. All rights reserved.`
 
     async function captchaSubmit(data) {
         const form = document.getElementById("contact-form");
         const url = 'https://api.nordicgamelab.org/api/submit-form';
-
+        const thankYouMessage = document.getElementById("thankYouMessage");
         try {
             const formData = new FormData(form);
     
             const responseData = await postFormDataAsJson({ url, formData });
     
             console.log({ responseData });
+
+            form.style.display = "none";
+
+            thankYouMessage.style.display = "block";
     
         } catch (error) {
             console.error(error);
