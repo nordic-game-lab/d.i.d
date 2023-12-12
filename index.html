@@ -162,7 +162,7 @@ freshpaint.page();
 </script>
 	
     
-<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?compat=recaptcha" async defer></script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 	<link rel="stylesheet" href="/css/bootstrap.min.css">
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
@@ -333,8 +333,8 @@ freshpaint.page();
                                         <textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required" placeholder="Message" name="message"></textarea>
                                     </div>
                                 </div>
-                                <div class="col-md-12 cf-turnstile" data-sitekey="0x4AAAAAAAMmQp34e2V5PVFm" data-callback="captchaSubmit()">
-                                    <button type="submit" class="btn btn-skin pull-right" id="btnContactUs">
+                                <div class="col-md-12">
+                                    <button type="submit" class="btn btn-skin pull-right g-recaptcha" data-sitekey="6LcZYLMnAAAAAMGNxTxM3_boPVKGS6FGZ2hUSy_8" id="btnContactUs" data-callback="captchaSubmit">
                                         Send Message</button>
                                 </div>
                             </div>
