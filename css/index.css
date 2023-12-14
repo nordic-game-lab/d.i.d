@@ -68,3 +68,6 @@ transform:translatex(839px) translatey(94px);
     color: #fff;
 }
 
+.linksOnFotter a + a {
+    margin-left: 10px;
+}

@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <title> PAGE NOT FOUND </title>
   </head>
-
   <body>
     <section class="page_404">
       <div class="container">
@@ -38,16 +37,22 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12 col-lg-12">
-            <div class="wow shake" data-wow-delay="0.4s">
+            <div class="linksOnFotter">
               <a target="_blank" href="https://betteruptime.com/"><img style="width: 130px; height: 52px;" alt="Better Uptime Website Monitoring" src="https://betteruptime.com/assets/static_assets/badges/dark.png" /></a>
               <a id="privacy" class="footer-links" href="https://policies.nordicgamelab.org/privacy"> Privacy policy</a>
+              <a class="footer-links" href="https://policies.nordicgamelab.org/terms"> Terms of Service </a>
               <a id="sitemap" class="footer-links" href="/sitemap.xml"> Sitemap </a>
+              <a class="footer-links" href="https://blog.nordicgamelab.org"> Blog </a>
+              <a class="footer-links" href="https://docs.nordicgamelab.org"> Documentation </a>
+              <a class="footer-links" href="https://developers.learnhub.nordicgamelab.org"> Developers </a>
+              <a class="footer-links" href="https://support.nordicgamelab.org"> Help center </a>
             </div>
             <p id="copyright">© Nordic Game Lab. All rights reserved.</p>
           </div>
         </div>
       </div>
     </footer>
+    <script type="module" src="js/partytowntojs.mjs"></script>
     <script>
       const copyrightContainer = document.getElementById('copyright');
       copyrightContainer.textContent = `© ${new Date().getFullYear()} Nordic Game Lab LLC. All rights reserved.`
