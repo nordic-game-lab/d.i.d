@@ -1,0 +1,11 @@
+# Nordic Game Lab LLC security contacts and policy
+
+# Our security contact channels
+Contact: mailto:security@nordicgamelab.oeg
+Contact: https://www.openbugbounty.org/bugbounty/Andrew/
+
+# Link to our vulnerability disclosure policy
+Policy: https://www.nordicgamelab.org/security.txt
+
+# Languages that our team speaks and understands
+Preferred-Languages: en-US
