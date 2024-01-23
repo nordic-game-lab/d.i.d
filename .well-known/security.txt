@@ -9,3 +9,5 @@ Policy: https://www.nordicgamelab.org/security.txt
 
 # Languages that our team speaks and understands
 Preferred-Languages: en-US
+
+OpenBugBounty: https://openbugbounty.org/bugbounty/Andrew/
