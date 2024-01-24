@@ -2,7 +2,6 @@
   for = "/*"
     [headers.values]
     Access-Control-Allow-Origin = "*"
-    X-Frame-Options = "SAMEORIGIN"
     X-XSS-Protection = "0"
     X-Content-Type-Options = "nosniff"
     Content-Security-Policy = "default-src 'self' 'inline' https://*.nordicgamelab.org https://www.canva.com; style-src 'self' https://*.nordicgamelab.org https://maxcdn.bootstrapcdn.com 'inline'; form-action 'self' https://*.nordicgamelab.org 'inline'; script-src 'self' https://*.nordicgamelab.org *google* https://maxcdn.bootstrapcdn.com  https://js.hs-scripts.com; connect-src 'self' https://*.nordicgamelab.org 'inline'; img-src *; base-uri 'self' https://*.nordicgamelab.org 'inline'; frame-ancestors 'none';"
