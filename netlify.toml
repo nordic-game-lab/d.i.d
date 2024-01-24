@@ -5,5 +5,5 @@
     X-Frame-Options = "SAMEORIGIN"
     X-XSS-Protection = "0"
     X-Content-Type-Options = "nosniff"
-    Content-Security-Policy = "default-src 'self' https://*.nordicgamelab.org https://www.canva.com; style-src 'self' https://*.nordicgamelab.org https://maxcdn.bootstrapcdn.com ; form-action 'self' https://*.nordicgamelab.org; script-src 'self' https://*.nordicgamelab.org https://www.google.com https://maxcdn.bootstrapcdn.com  https://js.hs-scripts.com; connect-src 'self' https://*.nordicgamelab.org; img-src 'self' https://*.nordicgamelab.org; base-uri 'self' https://*.nordicgamelab.org; frame-ancestors 'none';"
+    Content-Security-Policy = "default-src 'self' https://*.nordicgamelab.org https://www.canva.com; style-src 'self' https://*.nordicgamelab.org https://maxcdn.bootstrapcdn.com ; form-action 'self' https://*.nordicgamelab.org; script-src 'self' https://*.nordicgamelab.org *google* https://maxcdn.bootstrapcdn.com  https://js.hs-scripts.com; connect-src 'self' https://*.nordicgamelab.org; img-src 'self' https://*.nordicgamelab.org; base-uri 'self' https://*.nordicgamelab.org; frame-ancestors 'none';"
 
