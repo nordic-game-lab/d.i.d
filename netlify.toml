@@ -2,3 +2,8 @@
   for = "/*"
     [headers.values]
     Access-Control-Allow-Origin = "*"
+    X-Frame-Options = "SAMEORIGIN"
+    X-XSS-Protection = "0"
+    X-Content-Type-Options = "nosniff"
+    Content-Security-Policy = "default-src 'https://*.nordicgamelab.org'; style-src 'https://*.nordicgamelab.org'; form-action 'https://*.nordicgamelab.org'; script-src 'https://*.nordicgamelab.org'; connect-src 'https://*.nordicgamelab.org'; img-src 'https://*.nordicgamelab.org'; base-uri 'https://*.nordicgamelab.org'; frame-ancestors 'none';"
+
