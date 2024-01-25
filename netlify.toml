@@ -4,5 +4,6 @@
     Access-Control-Allow-Origin = "*"
     X-XSS-Protection = "0"
     X-Content-Type-Options = "nosniff"
-    Content-Security-Policy = "report-uri https://nordicgamelab.report-uri.com/r/d/csp/wizard;"
+    Reporting-Endpoints = "csp-endpoint='https://example.com/reports'"
+    Content-Security-Policy = "report-uri https://nordicgamelab.report-uri.com/r/d/csp/wizard; report-to csp-endpoint"
 
