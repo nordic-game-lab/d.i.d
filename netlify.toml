@@ -4,5 +4,5 @@
     Access-Control-Allow-Origin = "*"
     X-XSS-Protection = "0"
     X-Content-Type-Options = "nosniff"
-    Content-Security-Policy = "report-to https://nordicgamelab.report-uri.com/r/d/csp/wizard;"
+    Content-Security-Policy = "report-uri https://nordicgamelab.report-uri.com/r/d/csp/wizard;"
 
