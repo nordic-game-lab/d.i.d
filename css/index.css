@@ -71,3 +71,7 @@ transform:translatex(839px) translatey(94px);
 .linksOnFotter a + a {
     margin-left: 10px;
 }
+
+.companySocial li {
+    background: none;
+}
