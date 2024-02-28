@@ -45,7 +45,7 @@ freshpaint.page();
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <a class="navbar-brand" href="https://link.nordicgamelab.org/GrX">Nordic Game Lab</a>
+          <a class="navbar-brand" id="navbar-brand" href="https://link.nordicgamelab.org/GrX">Nordic Game Lab</a>
           <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
@@ -262,6 +262,14 @@ freshpaint.page();
 <script src="//code.tidio.co/tq37ckt3qrpd15n7gjrlbjt03jgfqhcr.js" async></script>
 <script id="main-script" src="js/index-scripts.js"></script>
 <script type="module" src="js/partytowntojs.mjs"></script>
+<script>
+    // @see https://docs.headwayapp.co/widget for more configuration options.
+    var HW_config = {
+      selector: "#navbar-brand", // CSS selector where to inject the badge
+      account:  "7g64ox"
+    }
+  </script>
+  <script async src="https://cdn.headwayapp.co/widget.js"></script>
 <script>
     const copyrightContainer = document.getElementById('copyright');
     copyrightContainer.textContent = `© ${new Date().getFullYear()} Nordic Game Lab, LLC. All rights reserved.`
