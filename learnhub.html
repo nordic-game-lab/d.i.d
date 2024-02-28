@@ -65,7 +65,7 @@
                 <li>3 users Maximum</li>
                 <li>Help center access</li>
               </ul>
-              <button type="button" class="w-100 btn btn-lg btn-outline-primary">Sign up for free</button>
+              <button type="button" onclick="accounts()" class="w-100 btn btn-lg btn-outline-primary">Sign up for free</button>
             </div>
           </div>
         </div>
@@ -80,7 +80,7 @@
                 <li>20 users Maximum</li>
                 <li>Help center access</li>
               </ul>
-              <button type="button" class="w-100 btn btn-lg btn-primary">Get started</button>
+              <button type="button" onclick="accounts()" class="w-100 btn btn-lg btn-primary">Get started</button>
             </div>
           </div>
         </div>
@@ -95,7 +95,7 @@
                 <li>Contract users Maximum</li>
                 <li>Help center access</li>
               </ul>
-              <button type="button" class="w-100 btn btn-lg btn-primary">Contact us</button>
+              <button type="button" onclick="contactUs()" class="w-100 btn btn-lg btn-primary">Contact us</button>
             </div>
           </div>
         </div>
@@ -124,6 +124,12 @@
     <script>
         const copyrightContainer = document.getElementById('copyright');
         copyrightContainer.textContent = `© ${new Date().getFullYear()} Nordic Game Lab LLC. All rights reserved.`
+function accounts(){
+window.location.href = 'https://accounts.nordicgamelab.org';
+}
+function contactUs(){
+window.location.href = 'https://www.nordicgamelab.org/#contact';
+}
     </script>
     <script src="https://static.nordicgamelab.org/bootstrap.bundle.min.js"></script>
     <script src="js/jquery-easing.js"></script>
