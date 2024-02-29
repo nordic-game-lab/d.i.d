@@ -14,5 +14,5 @@
       ],
       "include_subdomains":true
       }'''
-    Content-Security-Policy = "default-src * 'self' data: 'unsafe-inline' 'unsafe-eval';frame-ancestors https://*.nordicgamelab.org; report-uri https://nordicgamelab.report-uri.com/a/d/g; report-to default"
+    Content-Security-Policy = "default-src * 'self' data: 'unsafe-inline' 'unsafe-eval';frame-ancestors https://*.nordicgamelab.org; style-src *; report-uri https://nordicgamelab.report-uri.com/a/d/g; report-to default"
 
