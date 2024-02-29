@@ -76,7 +76,7 @@ freshpaint.page();
 
         <div class="slogan">
             <h2>WELCOME TO <span class="text_color">nordic game lab&nbsp;</span> </h2>
-            <h4>WE ARE GROUP OF GENTLEMEN MAKING AWESOME WEB WITH BOOTSTRAP</h4>
+            <h4>WE ARE GROUP OF GENTLEMEN MAKING HR SOFTWARE WITH BOOTSTRAP</h4>
         </div>
         <div class="page-scroll">
             <a href="#service" class="btn btn-circle">
@@ -95,9 +95,9 @@ freshpaint.page();
                 <div style="overflow: hidden;" class="container">
                   <h2>Andrew Ball</h2>
                   <p class="title">CEO &amp; Founder</p>
-                  <p>I am a software developer and I did not like the prices of software so I started my own company to build cheaper software.</p>
+                  <p>As a software developer, I observed that existing software prices were not aligned with my expectations. Consequently, I established my own company with the goal of developing more cost-effective software solutions.</p>
                   <p>andrew@nordicgamelab.org</p>
-                  <p><button class="button">Contact</button></p>
+                  <p><button class="button" onclick="contact_founder()">Contact</button></p>
                 </div>
               </div>
             </div>
@@ -272,6 +272,10 @@ freshpaint.page();
 <script>
     const copyrightContainer = document.getElementById('copyright');
     copyrightContainer.textContent = `© ${new Date().getFullYear()} Nordic Game Lab, LLC. All rights reserved.`
+
+    function contact_founder() {
+        location.href = 'mailto:andrew@nordicgamelab.org'
+    }
 
     async function captchaSubmit(data) {
         const form = document.getElementById("contact-form");
