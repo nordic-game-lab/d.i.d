@@ -294,7 +294,7 @@ freshpaint.page();
         const thankYouMessage = document.getElementById("thankYouMessage");
         try {
             const formData = new FormData(form);
-    
+	    console.log(formData);
             const responseData = await postFormDataAsJson({ url, formData });
     
             console.log({ responseData });
