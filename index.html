@@ -189,6 +189,10 @@ freshpaint.page();
                                         <textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required" placeholder="Message" name="message"></textarea>
                                     </div>
                                 </div>
+<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+  <label class="form-check-label" for="flexCheckDefault">
+    I agree to receive marketing communications
+  </label>
                                 <div class="col-md-12">
                                     <button type="submit" class="btn btn-skin pull-right g-recaptcha" data-sitekey="6LcZYLMnAAAAAMGNxTxM3_boPVKGS6FGZ2hUSy_8" id="btnContactUs" data-callback="captchaSubmit">
                                         Send Message</button>
@@ -303,6 +307,7 @@ freshpaint.page();
         const plainFormData = Object.fromEntries(formData.entries());
         const formDataJsonString = JSON.stringify(plainFormData);
     
+console.log(formDataJsonString.flexCheckDefault);
         const fetchOptions = {
             method: "POST",
            
