@@ -294,7 +294,7 @@ freshpaint.page();
         const thankYouMessage = document.getElementById("thankYouMessage");
         try {
             const formData = new FormData(form);
-	    console.log(formData);
+
             const responseData = await postFormDataAsJson({ url, formData });
     
             console.log({ responseData });
@@ -312,7 +312,7 @@ freshpaint.page();
     async function postFormDataAsJson({ url, formData }) {
         const plainFormData = Object.fromEntries(formData.entries());
         const formDataJsonString = JSON.stringify(plainFormData);
-    
+        console.log(plainFormData);
 	console.log(formDataJsonString);
         const fetchOptions = {
             method: "POST",
