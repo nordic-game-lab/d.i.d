@@ -16,7 +16,7 @@ Disallow:
 User-agent: psbot
 Disallow: 
 User-agent: NordicGameLabBot
-Disallow: *
+Disallow: 
 User-agent: *
 Disallow: /
 Disallow: /404
