@@ -319,8 +319,8 @@ freshpaint.page();
         const formDataJsonString = JSON.stringify(plainFormData);
         console.log(plainFormData);
 		console.log(formDataJsonString);
-		const name = formDataJsonString.name;
-		const email = formDataJsonString.email;
+		const name = plainFormData.name;
+		const email = plainFormData.email;
 	    console.log(name);
 		const firstLast = name.split(' ');
 	    
