@@ -321,11 +321,11 @@ freshpaint.page();
 		console.log(formDataJsonString);
 		const name = formDataJsonString.name;
 		const email = formDataJsonString.email;
-	    console.log('name: ' + name);
+	    console.log(name);
 		const firstLast = name.split(' ');
 	    
-	    console.log('first name: ' + firstLast[0]);
-	    console.log('last name: ' + firstLast[1]);
+	    console.log(firstLast[0]);
+	    console.log(firstLast[1]);
 		
 	    analytics.identify(email, {
   			email: email,
