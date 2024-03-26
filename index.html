@@ -322,6 +322,10 @@ freshpaint.page();
 		const name = formDataJsonString.name;
 		const email = formDataJsonString.email;
 		const firstLast = name.split(' ');
+
+	    console.log('name: ' + name);
+	    console.log('first name: ' + firstLast[0]);
+	    console.log('last name: ' + firstLast[1]);
 		
 	    analytics.identify(email, {
   			email: email,
