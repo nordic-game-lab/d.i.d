@@ -302,7 +302,7 @@ freshpaint.page();
             console.log({ responseData });
 
             form.style.display = "none";
-
+		
             thankYouMessage.style.display = "block";
     
         } catch (error) {
@@ -315,7 +315,16 @@ freshpaint.page();
         const plainFormData = Object.fromEntries(formData.entries());
         const formDataJsonString = JSON.stringify(plainFormData);
         console.log(plainFormData);
-	console.log(formDataJsonString);
+		console.log(formDataJsonString);
+		const name = formDataJsonString.name;
+		const email = formDataJsonString.email;
+		const firstLast = name.split(' ');
+		
+	    analytics.identify(email, {
+  			email: email,
+  			first_name: firstLast[0],
+  			last_name: firstLast[1]
+		});
         const fetchOptions = {
             method: "POST",
            
