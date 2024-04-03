@@ -328,10 +328,13 @@ freshpaint.page();
 	    console.log(firstLast[1]);
 		
 	    analytics.identify(email, {
-  			email: email,
-  			first_name: firstLast[0],
-  			last_name: firstLast[1]
-		});
+  	     		email: email,
+  	      		first_name: firstLast[0],
+  	    		last_name: firstLast[1]
+	    	});
+	    analytics.track('form_submit', {
+		    title: 'Contact_us'
+	    });
         const fetchOptions = {
             method: "POST",
            
