@@ -207,9 +207,15 @@
         const copyrightContainer = document.getElementById('copyright');
         copyrightContainer.textContent = `© ${new Date().getFullYear()} Nordic Game Lab LLC. All rights reserved.`
         function learnhub(){
+          analytics.track('Sign_up', {
+              type: 'Non_Enterprise'
+          })
           window.location.href = 'https://learnhub.nordicgamelab.org';
         }
         function contactUs(){
+          analytics.track('Sign_up', {
+              type: 'Enterprise'
+          })
           window.location.href = 'https://www.nordicgamelab.org/#contact';
         }
     </script>
