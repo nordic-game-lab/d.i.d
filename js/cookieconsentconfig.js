@@ -72,6 +72,19 @@ window.CookieConsent.init({
               }
           }
       },
+      marketing: {
+        needed: false,
+        wanted: false,
+        checked: true,
+        language: {
+            locale: {
+                en: {
+                    name: 'Marketing',
+                    description: 'marketing cookies play a significant role in personalizing user experiences and delivering targeted advertisements.'
+                }
+            }
+        }
+      },
       ab_testing: {
           needed: true,
           wanted: true,
@@ -89,7 +102,7 @@ window.CookieConsent.init({
       // List actual services here.
     services: {
       // Unique name.
-      analytics: {
+      google_analytics: {
         category: 'analytics',
         type: 'dynamic-script',
         search: 'analytics',
@@ -99,7 +112,7 @@ window.CookieConsent.init({
             domain: `.${window.location.hostname}`
           },
           {
-            name: /^_ga/,
+            name: /^_ga.*/,
             domain: `.${window.location.hostname}`
           }
         ],
@@ -107,6 +120,64 @@ window.CookieConsent.init({
           locale: {
             en: {
               name: 'Google Analytics'
+            }
+          }
+        }
+      },
+      google_ads: {
+        category: 'marketing',
+        type: 'dynamic-script',
+        search: 'marketing',
+        cookies: [
+          {
+            name: /^_gcl.*/,
+            domain: `.${window.location.hostname}`
+          }
+        ],
+        language: {
+          locale: {
+            en: {
+              name: 'Google Ads'
+            }
+          }
+        }
+      },
+      hubspot: {
+        category: 'marketing',
+        type: 'dynamic-script',
+        search: 'marketing',
+        cookies: [
+          {
+            name: '__hstc',
+            domain: `.${window.location.hostname}`
+          },
+          {
+            name: 'hubspotutk',
+            domain: `.${window.location.hostname}`
+          }
+        ],
+        language: {
+          locale: {
+            en: {
+              name: 'Hubspot'
+            }
+          }
+        }
+      },
+      posthog: {
+        category: 'marketing',
+        type: 'dynamic-script',
+        search: 'marketing',
+        cookies: [
+          {
+            name: /^ph_phc.*/,
+            domain: `.${window.location.hostname}`
+          }
+        ],
+        language: {
+          locale: {
+            en: {
+              name: 'PostHog'
             }
           }
         }
