@@ -1,0 +1,186 @@
+---
+import Layout from '../layouts/indexLayout.astro';
+---
+
+<Layout title="Welcome to Astro.">
+    	<!-- Section: intro -->
+    	<section id="intro" class="intro">
+        	<div class="slogan">
+            	<h2>WELCOME TO <span class="text_color">nordic game lab&nbsp;</span> </h2>
+            	<h4>WE ARE GROUP OF GENTLEMEN MAKING HR SOFTWARE WITH BOOTSTRAP</h4>
+        	</div>
+        	<div class="page-scroll">
+            	<a href="#service" class="btn btn-circle">
+                	<i class="fa fa-angle-double-down animated"></i>
+            	</a>
+        	</div>
+    	</section>
+    	<!-- /Section: intro -->
+
+		<!-- Section: founder-->
+		<section id="leadership" class="text-center">
+			<div class="row">
+				<div class="column">
+					<div class="card">
+						<div style="overflow: hidden;" class="container">
+					  		<h2>Andrew Ball</h2>
+					  		<p class="title">CEO &amp; Founder</p>
+					  		<p>As a software developer, I observed that existing software prices were not aligned with my expectations. Consequently, I established my own company with the goal of developing more cost-effective software solutions.</p>
+					  		<p>andrew@nordicgamelab.org</p>
+					  		<p><button class="button" onclick="contact_founder()">Contact</button></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- /Section: founder-->
+
+		<!-- Section: about -->
+		<section id="about" class="home-section text-center">
+			<div class="heading-about">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8 col-lg-offset-2">
+							<div class="section-heading">
+								<h2>About us</h2>
+								<i class="fa fa-2x fa-angle-down"></i>
+							</div>
+						</div>
+						<div style="height: 1000px; width: 100%; overflow: hidden;">
+							<div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%; padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden; border-radius: 8px; will-change: transform;">     
+								<iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;" src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFvTcBS_LM&#x2F;view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- /Section: about -->
+
+		<!-- Section: contact -->
+		<section id="contact" class="home-section text-center">
+			<div class="heading-contact">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8 col-lg-offset-2">
+							<div class="section-heading">
+								<h2>Get in touch</h2>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-2 col-lg-offset-5">
+						<hr class="marginbot-50">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-8">
+						<div class="boxed-grey">
+							<div style="display: none;" id="thankYouMessage">
+								<h1>Thank You!</h1>
+								<p>Want to create a form like this?</p>
+								<p>well you can't, because this is a custom system</p>
+							</div>
+							<form id="contact-form" method="POST">
+								<div class="row">
+									<div class="col-md-6">
+										<div class="form-group">
+											<label for="name">Name</label>
+											<input type="text" class="form-control" id="name" placeholder="Enter name" required="required" name="name">
+										</div>
+										<div class="form-group">
+											<label for="email">Email Address</label>
+											<div class="input-group">
+												<span class="input-group-addon"><span class="fa fa-envelope"></span></span>
+												<input type="email" class="form-control" id="email" placeholder="Enter email" required="required" name="email">
+											</div>
+										</div>
+										<div class="form-group">
+											<input name="marketing" class="form-check-input" type="checkbox" value="true" id="flexCheckDefault">
+											<label class="form-check-label" for="flexCheckDefault">I agree to receive marketing communications</label>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<label for="name">Message</label>
+											<textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required" placeholder="Message" name="message"></textarea>
+										</div>
+									</div>
+									<div class="col-md-12">
+										<button type="submit" class="btn btn-skin pull-right g-recaptcha" data-sitekey="6LcZYLMnAAAAAMGNxTxM3_boPVKGS6FGZ2hUSy_8" id="btnContactUs" data-callback="captchaSubmit">
+											Send Message
+										</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="col-lg-4">
+						<div class="widget-contact">
+							<h5>Main Office</h5>
+							<address>
+								<strong>Nordic Game Lab LLC.</strong>
+								<br><strong>Email</strong><br>
+							</address>
+							<a href="mailto:hello@nordicgamelab.org" id="">hello@nordicgamelab.org</a>	
+							<address>
+								<strong>We're on social networks</strong>
+								<ul class="company-social companySocial">
+									<li><a rel="me" href="https://mastodon.social/@hi5a"><img src="/images/mastodon-fill.png" width="40" height="40"></a></li>
+									<li><a href="https://brandfetch.com/nordicgamelab.org"><img src="/images/brandfetch.png" width="40" height="40"></a></li>
+								</ul>	
+							</address>			
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	<script is:inline>
+		function contact_founder() {
+        	location.href = 'mailto:andrew@nordicgamelab.org'
+    	}
+
+		async function captchaSubmit(data) {
+        const form = document.getElementById("contact-form");
+        const url = 'https://api.nordicgamelab.org/api/submit-form';
+        const thankYouMessage = document.getElementById("thankYouMessage");
+        try {
+            const formData = new FormData(form);
+            await postFormDataAsJson({ url, formData });
+            form.style.display = "none";
+            thankYouMessage.style.display = "block";
+        } catch (error) {
+            console.error(error);
+        }
+    }
+
+    async function postFormDataAsJson({ url, formData }) {
+        const plainFormData = Object.fromEntries(formData.entries());
+        const formDataJsonString = JSON.stringify(plainFormData);
+		
+        const fetchOptions = {
+            method: "POST",
+           
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            },
+            
+            body: formDataJsonString
+        };
+    
+        const response = await fetch(url, fetchOptions);
+    
+        if (!response.ok) {
+            const errorMessage = await response.text();
+            throw new Error(errorMessage);
+        }
+    
+        return response.json();
+    }
+	</script>
+</Layout>
+
