@@ -124,3 +124,47 @@ import Layout from '../layouts/Layout.astro';
 	</script>
 </Layout>
 
+<script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type":"AggregateOffer",
+      "highPrice":"20.00",
+      "lowPrice":"0.00",
+      "offerCount":"2",
+      "priceCurrency":"USD",
+      "offers":[
+          {
+          "@type":"Offer",
+          "priceSpecification":
+              {
+              "@type":"UnitPriceSpecification",
+              "price":"0",
+              "priceCurrency":"USD",
+              "name":"LearnHub Free monthly subscription",
+              "url":"https://www.nordicgamelab.org/learnhub?plan=free",
+              "referenceQuantity":{
+                      "@type":"QuantitativeValue",
+                      "value":"1",
+                      "unitCode":"MON"
+                  }
+              }
+          },
+          {
+          "@type":"Offer",
+          "priceSpecification":
+              {
+              "@type":"UnitPriceSpecification",
+              "price":"20",
+              "priceCurrency":"USD",
+              "name":"LearnHub Premium monthly subscription",
+              "url":"https://www.nordicgamelab.org/learnhub?plan=premium",
+              "referenceQuantity":{
+                      "@type":"QuantitativeValue",
+                      "value":"1",
+                      "unitCode":"MON"
+                  }
+              }
+          }
+      ]
+  }   
+  </script>
