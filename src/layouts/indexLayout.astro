@@ -23,6 +23,7 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
+		<script>console.log('%cStop!', 'color: red; font-size: 30px; font-weight: bold;');console.log("This is a browser feature intended for developers. If someone told you to copy-paste something here to enable a feature, it is a scam.");console.log("For more information go to: https://en.wikipedia.org/wiki/Self-XSS")</script>
         <Header />
 		<slot />
 		<Footer />
