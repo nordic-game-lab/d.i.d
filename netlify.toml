@@ -4,7 +4,7 @@
     Access-Control-Allow-Origin = "*"
     X-XSS-Protection = "0"
     X-Content-Type-Options = "nosniff"
-    Content-Security-Policy-Report-Only = "default-src 'self' data: 'unsafe-inline' 'unsafe-eval' blob: https://app.clearbit.com https://x.clearbitjs.com https://*.tidiochat.com https://*.posthog.com https://tag.clearbitscripts.com https://*.tidio.co https://*.nr-data.net https://*.newrelic.com https://*.customer.io https://www.termsfeed.com https://*.nordicgamelab.org https://*.google.com https://*.gstatic.com https://*.sentry-cdn.com; frame-ancestors https://*.nordicgamelab.org; report-uri https://csp.nordicgamelab.org/a/d/g?host=www.nordicgamelab.org; report-to csp-endpoint"
+    Content-Security-Policy = "default-src 'self' data: 'unsafe-inline' 'unsafe-eval' blob: https://app.clearbit.com https://x.clearbitjs.com https://*.tidiochat.com https://*.posthog.com https://tag.clearbitscripts.com https://*.tidio.co https://*.nr-data.net https://*.newrelic.com https://*.customer.io https://www.termsfeed.com https://*.nordicgamelab.org https://*.google.com https://*.gstatic.com https://*.sentry-cdn.com; frame-ancestors https://*.nordicgamelab.org; report-uri https://csp.nordicgamelab.org/a/d/g?host=www.nordicgamelab.org; report-to csp-endpoint"
     Reporting-Endpoints = '''
       csp-endpoint="https://csp.nordicgamelab.org/a/d/g?host=www.nordicgamelab.org"
     '''
