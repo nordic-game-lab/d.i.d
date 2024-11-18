@@ -1,5 +1,6 @@
 ---
 import Layout from '@layouts/indexLayout.astro';
+import Card from '@components/Card.astro';
 ---
 
 <Layout title="Nordic Game Lab LLC">
@@ -7,7 +8,7 @@ import Layout from '@layouts/indexLayout.astro';
     	<section id="intro" class="intro">
         	<div class="slogan">
             	<h2>WELCOME TO <span class="text_color">nordic game lab&nbsp;</span> </h2>
-            	<h4>WE ARE GROUP OF GENTLEMEN MAKING HR SOFTWARE WITH BOOTSTRAP</h4>
+            	<h4>WE ARE GROUP OF GENTLEMEN MAKING SOFTWARE WITH BOOTSTRAP</h4>
         	</div>
         	<div class="page-scroll">
             	<a href="#service" class="btn btn-circle">
@@ -16,6 +17,31 @@ import Layout from '@layouts/indexLayout.astro';
         	</div>
     	</section>
     	<!-- /Section: intro -->
+
+		<!-- Section: -->
+		<section>
+			<div id="hire-us" class="text-center">
+				<h2>Elevate Your Business with Custom Software Solutions </h2>
+				<div>
+					<p>At Nordic Game Lab, we understand that each business has unique challenges and opportunities. That’s why we are dedicated to providing tailor-made software solutions that not only address your specific needs but also help you achieve your long-term goals. </p>
+					<h3>Why Choose Us for Your Software Development Needs?</h3>
+					<Card title="1. Tailor-Made Solutions" body="Our personalized software development process begins with a deep dive into your business requirements. We believe that the best solutions come from understanding your goals, allowing us to create customized applications that align perfectly with your vision. Whether you need an intuitive HR platform or a sophisticated customer management system, our team is here to craft a solution just for you. "></Card>
+					<Card title="2. Commitment to Innovation" body="The tech landscape is constantly evolving, and so are we. By embracing new technologies and best practices, we ensure our software solutions are not just current but also pioneering in their functionality. Our innovative approach empowers your business to stay ahead in a competitive market. "></Card>
+					<Card title="3. Quality Assurance" body="We pride ourselves on our rigorous quality assurance standards. Every piece of software we develop undergoes thorough testing to ensure it is reliable, efficient and performs exceptionally in real-world scenarios. Your trust is paramount, and we strive to build lasting relationships through excellence in every project."></Card>
+					<Card title="4. Affordability" body="Quality doesn’t have to come at a premium. At Nordic Game Lab, we believe that robust software solutions should be accessible to businesses of all sizes. Our focus on delivering high-quality development at competitive prices ensures that you get value for your investment without compromising on performance. "></Card>
+					<Card title="5. Client-Centric Values" body="We place our clients at the center of everything we do. Our collaborative approach means we listen carefully to your ideas and feedback, ensuring that the final product is a true reflection of your vision. We believe that your success is our success, and we are committed to fostering a long-term partnership that drives mutual growth."></Card>
+				</div>
+				<div>
+					<h3>Let’s Build Your Future Together Are you ready to transform your business with bespoke software solutions?</h3>
+					<p> At Nordic Game Lab, we are more than just a service provider—we are your partners in innovation. </p>
+				</div>
+				<div>
+					<h2>Hire Us!</h2>
+					<p>If you want to take the first step towards building powerful software tailored to your business needs, we invite you to reach out today. Our dedicated team is eager to understand your goals and create solutions that enable you to thrive in today’s fast-paced environment. Don’t wait any longer—your journey toward operational excellence starts with Nordic Game Lab. </p>
+				</div>
+			</div>
+		 </section>
+		<!-- /Section: -->
 
 		<!-- Section: founder-->
 		<section id="leadership" class="text-center">
@@ -26,7 +52,7 @@ import Layout from '@layouts/indexLayout.astro';
 					  		<h2>Andrew Ball</h2>
 					  		<p class="title">CEO &amp; Founder</p>
 					  		<p>As a software developer, I observed that existing software prices were not aligned with my expectations. Consequently, I established my own company with the goal of developing more cost-effective software solutions.</p>
-					  		<p>andrew@nordicgamelab.org</p>
+							<address>andrew@nordicgamelab.org</address>
 					  		<p><button class="button" onclick="contact_founder()">Learn More</button></p>
 						</div>
 					</div>
