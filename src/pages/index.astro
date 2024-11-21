@@ -164,6 +164,19 @@ import Card from '@components/Card.astro';
     async function postFormDataAsJson({ url, formData }) {
         const plainFormData = Object.fromEntries(formData.entries());
         const formDataJsonString = JSON.stringify(plainFormData);
+
+		const uname = plainFormData.name.split(' ');
+		const uid = () => {
+			const name = "ngl_user_id";
+			const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+  			if (match) return match[2];
+		}
+
+		rudderanalytics.identify( uid() , {
+			firstName: uname[0],
+    		lastName: uname[1],
+    		email: plainFormData.email
+		});
 		
         const fetchOptions = {
             method: "POST",
