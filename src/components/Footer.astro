@@ -32,6 +32,13 @@
           <li><a href="https://about.nordicgamelab.org/press">Press</a></li>
         </ul>
       </div>
+      <div class="ft-main-item">
+        <h2 class="ft-title">Newsletter</h2>
+          <form id="newsletterForm">
+            <input type="email" id="email" placeholder="Enter email" name="email" required />
+            <input type="submit" value="Sign Up">
+          </form>
+      </div>
     </section>
   
     <!-- Footer social -->
@@ -65,6 +72,75 @@
       </ul>
     </section>
   </footer>
+
+
+  <script is:inline>
+    const newsletterForm = document.getElementById("newsletterForm");
+		async function newsletterSubmit() {
+        const form = document.getElementById("newsletterForm");
+        const portalId = "23935283";
+        const formId = "80d294ac-0c32-45db-b046-1bc9f37184b9";
+        const url = `https://api.hsforms.com/submissions/v3/integration/submit/${portalId}/${formId}`;
+        try {
+            const formData = new FormData(form);
+            await newsletterPost({ url, formData });
+        } catch (error) {
+            console.error(error);
+        }
+    }
+    newsletterForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      newsletterSubmit();
+    });
+
+    async function newsletterPost({ url, formData }) {
+        let plainFormData = Object.fromEntries(formData.entries());
+        const uid = () => {
+			    const name = "ngl_user_id";
+			    const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+  			  if (match) return match[2];
+		    }
+        plainFormData.uid = uid();
+        
+        rudderanalytics.identify( uid() , {
+    		  email: plainFormData.email
+		    });
+		    rudderanalytics.track( "Newsletter Signup");
+        const fetchOptions = {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json',
+              
+            },
+            mode: "no-cors",
+            body: {
+              "fields": [
+                {
+                  "objectTypeId": "0-1", 
+                  "name": "email", 
+                  "value": plainFormData.email 
+                }, 
+                {
+                  "objectTypeId": "0-1", 
+                  "name": "ngl_uid", 
+                  "values": plainFormData.uid 
+                }
+              ],
+              "context": {
+                "pageUri": window.location.href,
+                "pageName": document.title
+              }
+            }
+        };
+        const response = await fetch(url, fetchOptions);
+        if (!response.ok) {
+            const errorMessage = await response.text();
+            throw new Error(errorMessage);
+        }
+        return response.json();
+    }
+</script>
+
 
 <style>/* Generic styling */
     * {
