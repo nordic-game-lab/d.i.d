@@ -18,34 +18,33 @@ const description = "Nordic Game Lab LLC is a small software development company
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/ico" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
-			
+
 		<!-- Style Sheets and Scripts -->
 		<link rel="stylesheet" href="https://static.nordicgamelab.org/bootstrap.css">
 		<script src="https://static.nordicgamelab.org/bootstrap.bundle.min.js"></script>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 		<script is:inline src="https://www.google.com/recaptcha/api.js"></script>
-			
+
 		<!-- Canonical URL -->
 		<link rel="canonical" href={canonicalURL} />
-			
+
 		<!-- Primary Meta Tags -->
 		<title>{title}</title>
 		<meta name="title" content={title} />
 		<meta name="description" content={description} />
-			
+
 		<!-- Open Graph / Facebook -->
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content={Astro.url} />
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
-			
+
 		<!-- Twitter -->
 		<meta property="twitter:url" content={Astro.url} />
 		<meta property="twitter:title" content={title} />
 		<meta property="twitter:description" content={description} />
 	</head>
 	<body>
-		<script>console.log('%cStop!', 'color: red; font-size: 30px; font-weight: bold;');console.log("This is a browser feature intended for developers. If someone told you to copy-paste something here to enable a feature, it is a scam.");console.log("For more information go to: https://en.wikipedia.org/wiki/Self-XSS")</script>
 		<Header />
 		<slot />
 		<Footer />
