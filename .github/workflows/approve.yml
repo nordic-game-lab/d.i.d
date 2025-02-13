@@ -17,7 +17,7 @@ jobs:
   if: github.actor == 'renovate[bot]' || github.actor == 'dependabot[bot]'
   steps:
    - name: Import Secrets
-     uses: Infisical/secrets-action@v1.0.7
+     uses: Infisical/secrets-action@v1.0.8
      with:
           method: "oidc"
           env-slug: "dev"
